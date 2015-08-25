@@ -8,6 +8,6 @@ public class Generator {
 	    Random rand = new Random();
     	int randomNum = rand.nextInt(names.length);
     	return names[randomNum];		
-	}
+	} 
 
 }

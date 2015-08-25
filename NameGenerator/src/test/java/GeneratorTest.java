@@ -1,4 +1,5 @@
 import org.junit.Assert;
+import static org.hamcrest.CoreMatchers.*;
 import org.junit.Test;
 
 public class GeneratorTest {
@@ -14,7 +15,7 @@ public class GeneratorTest {
 	public void TryToGenerateAdam(){
 		Generator g = new Generator();
 		
-		Assert.assertEquals("Adam", g.generateName());
+		Assert.assertThat(g.generateName(), either(is("Adam")).or(is("Klausia")));
 	}
 	
 }
